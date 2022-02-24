@@ -37,17 +37,7 @@ const listSchema = {
 };
 const List = mongoose.model("List", listSchema);
 
-app.use( function(req, res, next) { // Ignore favicon.ico requests.
 
-    if (req.originalUrl && req.originalUrl.split("/").pop() === 'favicon.ico') {
- 
-       return res.sendStatus(204);
- 
-    }
- 
-    return next();
- 
- });
 
 
 app.get("/", (req, res) => {

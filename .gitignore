@@ -1,5 +1,7 @@
 # Don't track content of these folders/extensions
 node_modules/
+npm-debug.log
+/*.env
 .tmp/
 .vs
 *.diff

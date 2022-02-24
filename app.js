@@ -127,8 +127,12 @@ app.get("/about", function(req, res){
     res.render("about");
   });
 
-app.listen(27017, () => {
-    console.log("Server started on port 27017");
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
+app.listen(port);
+
+app.listen(port, () => {
+    console.log("Server started");
 });
-
-
